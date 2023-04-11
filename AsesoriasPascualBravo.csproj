@@ -58,11 +58,34 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccesoDatos\DAO.cs" />
-    <Compile Include="frmLogin.cs">
+    <Compile Include="AsignaturasDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AsignaturasDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAgendarCita.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLogin.Designer.cs">
-      <DependentUpon>frmLogin.cs</DependentUpon>
+    <Compile Include="FrmAgendarCita.Designer.cs">
+      <DependentUpon>FrmAgendarCita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCrearAsesoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCrearAsesoria.Designer.cs">
+      <DependentUpon>FrmCrearAsesoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRegistro.Designer.cs">
+      <DependentUpon>FrmRegistro.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
@@ -72,9 +95,19 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servicios\Agendamientos.cs" />
     <Compile Include="Servicios\Login.cs" />
-    <EmbeddedResource Include="frmLogin.resx">
-      <DependentUpon>frmLogin.cs</DependentUpon>
+    <EmbeddedResource Include="FrmAgendarCita.resx">
+      <DependentUpon>FrmAgendarCita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCrearAsesoria.resx">
+      <DependentUpon>FrmCrearAsesoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegistro.resx">
+      <DependentUpon>FrmRegistro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
@@ -89,6 +122,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="AsignaturasDataSet.xsc">
+      <DependentUpon>AsignaturasDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AsignaturasDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AsignaturasDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AsignaturasDataSet.xss">
+      <DependentUpon>AsignaturasDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -111,6 +155,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\UIPascualBravo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cropped-Institucion_Pascual_Bravo_Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pb.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

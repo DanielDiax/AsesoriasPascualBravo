@@ -63,9 +63,29 @@ namespace AsesoriasPascualBravo.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cropped_Institucion_Pascual_Bravo_Logo {
+            get {
+                object obj = ResourceManager.GetObject("cropped-Institucion_Pascual_Bravo_Logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap institucion_universitaria_pascual_bravo_1662042123 {
             get {
                 object obj = ResourceManager.GetObject("institucion-universitaria-pascual-bravo_1662042123", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pb {
+            get {
+                object obj = ResourceManager.GetObject("pb", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
