@@ -54,6 +54,7 @@ namespace AsesoriasPascualBravo
             this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
             this.btnSalir = new FontAwesome.Sharp.IconButton();
             this.btnSeleccionarAsignaturas = new FontAwesome.Sharp.IconButton();
+            this.btnConsultarAsesorias = new FontAwesome.Sharp.IconButton();
             this.btnCrearAsesoria = new FontAwesome.Sharp.IconButton();
             this.btnConsultarCitas = new FontAwesome.Sharp.IconButton();
             this.btnAgendarCitas = new FontAwesome.Sharp.IconButton();
@@ -79,6 +80,7 @@ namespace AsesoriasPascualBravo
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.panelMenu.Controls.Add(this.btnSalir);
             this.panelMenu.Controls.Add(this.btnSeleccionarAsignaturas);
+            this.panelMenu.Controls.Add(this.btnConsultarAsesorias);
             this.panelMenu.Controls.Add(this.btnCrearAsesoria);
             this.panelMenu.Controls.Add(this.btnConsultarCitas);
             this.panelMenu.Controls.Add(this.btnAgendarCitas);
@@ -404,11 +406,11 @@ namespace AsesoriasPascualBravo
             this.btnSalir.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnSalir.IconSize = 32;
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalir.Location = new System.Drawing.Point(0, 380);
+            this.btnSalir.Location = new System.Drawing.Point(0, 420);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnSalir.Size = new System.Drawing.Size(200, 40);
-            this.btnSalir.TabIndex = 7;
+            this.btnSalir.TabIndex = 9;
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -427,16 +429,41 @@ namespace AsesoriasPascualBravo
             this.btnSeleccionarAsignaturas.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnSeleccionarAsignaturas.IconSize = 32;
             this.btnSeleccionarAsignaturas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSeleccionarAsignaturas.Location = new System.Drawing.Point(0, 340);
+            this.btnSeleccionarAsignaturas.Location = new System.Drawing.Point(0, 380);
             this.btnSeleccionarAsignaturas.Name = "btnSeleccionarAsignaturas";
             this.btnSeleccionarAsignaturas.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnSeleccionarAsignaturas.Size = new System.Drawing.Size(200, 40);
-            this.btnSeleccionarAsignaturas.TabIndex = 6;
+            this.btnSeleccionarAsignaturas.TabIndex = 8;
             this.btnSeleccionarAsignaturas.Text = "Seleccionar Asignaturas";
             this.btnSeleccionarAsignaturas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSeleccionarAsignaturas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSeleccionarAsignaturas.UseVisualStyleBackColor = true;
-            this.btnSeleccionarAsignaturas.Click += new System.EventHandler(this.btnCrearCitas_Click);
+            this.btnSeleccionarAsignaturas.Visible = false;
+            this.btnSeleccionarAsignaturas.Click += new System.EventHandler(this.btnSeleccionarAsignaturas_Click);
+            // 
+            // btnConsultarAsesorias
+            // 
+            this.btnConsultarAsesorias.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnConsultarAsesorias.FlatAppearance.BorderSize = 0;
+            this.btnConsultarAsesorias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultarAsesorias.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarAsesorias.ForeColor = System.Drawing.Color.DarkGray;
+            this.btnConsultarAsesorias.IconChar = FontAwesome.Sharp.IconChar.FileInvoice;
+            this.btnConsultarAsesorias.IconColor = System.Drawing.Color.DarkGray;
+            this.btnConsultarAsesorias.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnConsultarAsesorias.IconSize = 32;
+            this.btnConsultarAsesorias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsultarAsesorias.Location = new System.Drawing.Point(0, 340);
+            this.btnConsultarAsesorias.Name = "btnConsultarAsesorias";
+            this.btnConsultarAsesorias.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnConsultarAsesorias.Size = new System.Drawing.Size(200, 40);
+            this.btnConsultarAsesorias.TabIndex = 6;
+            this.btnConsultarAsesorias.Text = "ConsultarAsesorias";
+            this.btnConsultarAsesorias.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsultarAsesorias.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnConsultarAsesorias.UseVisualStyleBackColor = true;
+            this.btnConsultarAsesorias.Visible = false;
+            this.btnConsultarAsesorias.Click += new System.EventHandler(this.btnConsultarAsesorias_Click);
             // 
             // btnCrearAsesoria
             // 
@@ -459,7 +486,8 @@ namespace AsesoriasPascualBravo
             this.btnCrearAsesoria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCrearAsesoria.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCrearAsesoria.UseVisualStyleBackColor = true;
-            this.btnCrearAsesoria.Click += new System.EventHandler(this.btnVisualizarCitas_Click);
+            this.btnCrearAsesoria.Visible = false;
+            this.btnCrearAsesoria.Click += new System.EventHandler(this.btnCrearAsesoria_Click);
             // 
             // btnConsultarCitas
             // 
@@ -482,6 +510,7 @@ namespace AsesoriasPascualBravo
             this.btnConsultarCitas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConsultarCitas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnConsultarCitas.UseVisualStyleBackColor = true;
+            this.btnConsultarCitas.Visible = false;
             this.btnConsultarCitas.Click += new System.EventHandler(this.btnConsultarCitas_Click);
             // 
             // btnAgendarCitas
@@ -505,6 +534,7 @@ namespace AsesoriasPascualBravo
             this.btnAgendarCitas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAgendarCitas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAgendarCitas.UseVisualStyleBackColor = true;
+            this.btnAgendarCitas.Visible = false;
             this.btnAgendarCitas.Click += new System.EventHandler(this.btnAgendarCitas_Click);
             // 
             // btnRegistro
@@ -610,13 +640,12 @@ namespace AsesoriasPascualBravo
         private FontAwesome.Sharp.IconPictureBox btnMinus;
         private FontAwesome.Sharp.IconPictureBox btnMaximize;
         private System.Windows.Forms.Panel panel2;
-        public FontAwesome.Sharp.IconButton btnSeleccionarAsignaturas;
+        public FontAwesome.Sharp.IconButton btnConsultarAsesorias;
         public FontAwesome.Sharp.IconButton btnCrearAsesoria;
         public FontAwesome.Sharp.IconButton btnConsultarCitas;
         public FontAwesome.Sharp.IconButton btnAgendarCitas;
         public FontAwesome.Sharp.IconButton btnRegistro;
         public FontAwesome.Sharp.IconButton btnLogin;
-        public FontAwesome.Sharp.IconButton btnSalir;
         public System.Windows.Forms.Label lblApellidoUsuario;
         public System.Windows.Forms.Label lblNombreUsuario;
         private System.Windows.Forms.Panel panelLogin;
@@ -629,6 +658,8 @@ namespace AsesoriasPascualBravo
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.PictureBox pbPascualBravo;
         public System.Windows.Forms.Label lblPerfil;
+        public FontAwesome.Sharp.IconButton btnSeleccionarAsignaturas;
+        public FontAwesome.Sharp.IconButton btnSalir;
     }
 }
 

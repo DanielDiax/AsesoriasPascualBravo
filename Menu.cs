@@ -19,7 +19,7 @@ namespace AsesoriasPascualBravo
             this.lblNombreUsuario.Text = "";
         }
         // Creo campos que se van a asignar dinamicamente a los botones 
-        #region Campos
+        #region Campos, Propiedades, Objeto y Variables
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form currentChildForm;
@@ -44,6 +44,8 @@ namespace AsesoriasPascualBravo
             this.ControlBox = false;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            IdEstudiante = 0;
+            IdDocente = 0;
         }
 
         //Estructura de Colores, para invocar uno especificamente al accionar el botón(Opcional)
@@ -134,7 +136,6 @@ namespace AsesoriasPascualBravo
         }
         private void btnLogin_Click(object sender, EventArgs e)
         {
-
             ActivateButton(sender, RGBColors.color1);
             OpenChildForm(new FrmLogin());
             FrmLogin frmLogin = new FrmLogin();
@@ -162,19 +163,24 @@ namespace AsesoriasPascualBravo
         private void btnConsultarCitas_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color4);
+            OpenChildForm(new FrmConsultarCitas(IdEstudiante));
         }
 
-        private void btnVisualizarCitas_Click(object sender, EventArgs e)
+        private void btnCrearAsesoria_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color5);
             OpenChildForm(new FrmCrearAsesoria(IdDocente));
         }
-
-        private void btnCrearCitas_Click(object sender, EventArgs e)
+        private void btnConsultarAsesorias_Click(object sender, EventArgs e)
         {
+            OpenChildForm(new FrmConsultarAsesorias(IdDocente));
             ActivateButton(sender, RGBColors.color6);
         }
-
+        private void btnSeleccionarAsignaturas_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color2);
+            OpenChildForm(new FrmSeleccionarAsignaturas(IdDocente));
+        }
         private void btnSalir_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color1);
@@ -295,7 +301,7 @@ namespace AsesoriasPascualBravo
                         Perfil = Convert.ToInt32(ds.Tables[0].Rows[0]["Perfil"]);
                         if (Perfil == 1)
                         {
-                            MessageBox.Show("Ha iniciado como estudiante", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            
                             this.btnAgendarCitas.Visible = true;
                             this.btnConsultarCitas.Visible = true;
                             this.lblPerfil.Text = "Estudiante";
@@ -303,9 +309,10 @@ namespace AsesoriasPascualBravo
                         }
                         else
                         {
-                            MessageBox.Show("Ha iniciado como profesor", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            this.btnSeleccionarAsignaturas.Visible = true;
+                            
+                            this.btnConsultarAsesorias.Visible = true;
                             this.btnCrearAsesoria.Visible = true;
+                            this.btnSeleccionarAsignaturas.Visible = true;
                             this.lblPerfil.Text = "Docente";
                             IdDocente = Convert.ToInt32(ds.Tables[0].Rows[0]["IdRows"]);
                         }
@@ -320,7 +327,6 @@ namespace AsesoriasPascualBravo
                    + Environment.NewLine + "Detalle del Error: " + ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         #endregion
 
         

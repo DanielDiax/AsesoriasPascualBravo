@@ -33,20 +33,20 @@ namespace AsesoriasPascualBravo
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblSeleccionAsignatura = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
+            this.dtpHoraFinal = new System.Windows.Forms.DateTimePicker();
+            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.dtpHoraInicial = new System.Windows.Forms.DateTimePicker();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgvAsignaturas = new System.Windows.Forms.DataGridView();
-            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
-            this.dtpHoraFinal = new System.Windows.Forms.DateTimePicker();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.lblSeleccionAsignatura = new MaterialSkin.Controls.MaterialLabel();
+            this.CrearAsesoria = new FontAwesome.Sharp.IconButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsignaturas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -65,7 +65,7 @@ namespace AsesoriasPascualBravo
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.lblSeleccionAsignatura);
-            this.groupBox1.Controls.Add(this.iconButton1);
+            this.groupBox1.Controls.Add(this.CrearAsesoria);
             this.groupBox1.Controls.Add(this.materialLabel3);
             this.groupBox1.Controls.Add(this.dtpHoraFinal);
             this.groupBox1.Controls.Add(this.materialLabel2);
@@ -81,26 +81,75 @@ namespace AsesoriasPascualBravo
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Agendamientos";
             // 
+            // lblSeleccionAsignatura
+            // 
+            this.lblSeleccionAsignatura.AutoSize = true;
+            this.lblSeleccionAsignatura.Depth = 0;
+            this.lblSeleccionAsignatura.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.lblSeleccionAsignatura.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblSeleccionAsignatura.Location = new System.Drawing.Point(11, 102);
+            this.lblSeleccionAsignatura.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblSeleccionAsignatura.Name = "lblSeleccionAsignatura";
+            this.lblSeleccionAsignatura.Size = new System.Drawing.Size(77, 18);
+            this.lblSeleccionAsignatura.TabIndex = 8;
+            this.lblSeleccionAsignatura.Text = "Asignatura";
+            // 
+            // materialLabel3
+            // 
+            this.materialLabel3.AutoSize = true;
+            this.materialLabel3.Depth = 0;
+            this.materialLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel3.Location = new System.Drawing.Point(280, 27);
+            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel3.Name = "materialLabel3";
+            this.materialLabel3.Size = new System.Drawing.Size(76, 18);
+            this.materialLabel3.TabIndex = 6;
+            this.materialLabel3.Text = "Hora Final";
+            // 
+            // dtpHoraFinal
+            // 
+            this.dtpHoraFinal.Font = new System.Drawing.Font("Bahnschrift", 12F);
+            this.dtpHoraFinal.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtpHoraFinal.Location = new System.Drawing.Point(286, 49);
+            this.dtpHoraFinal.MinDate = new System.DateTime(2023, 4, 10, 0, 0, 0, 0);
+            this.dtpHoraFinal.Name = "dtpHoraFinal";
+            this.dtpHoraFinal.Size = new System.Drawing.Size(128, 27);
+            this.dtpHoraFinal.TabIndex = 5;
+            // 
+            // materialLabel2
+            // 
+            this.materialLabel2.AutoSize = true;
+            this.materialLabel2.Depth = 0;
+            this.materialLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel2.Location = new System.Drawing.Point(142, 27);
+            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel2.Name = "materialLabel2";
+            this.materialLabel2.Size = new System.Drawing.Size(81, 18);
+            this.materialLabel2.TabIndex = 4;
+            this.materialLabel2.Text = "Hora Inicial";
+            // 
             // dtpHoraInicial
             // 
             this.dtpHoraInicial.Font = new System.Drawing.Font("Bahnschrift", 12F);
             this.dtpHoraInicial.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpHoraInicial.Location = new System.Drawing.Point(134, 49);
+            this.dtpHoraInicial.Location = new System.Drawing.Point(148, 49);
             this.dtpHoraInicial.MinDate = new System.DateTime(2023, 4, 10, 0, 0, 0, 0);
             this.dtpHoraInicial.Name = "dtpHoraInicial";
-            this.dtpHoraInicial.Size = new System.Drawing.Size(110, 27);
+            this.dtpHoraInicial.Size = new System.Drawing.Size(132, 27);
             this.dtpHoraInicial.TabIndex = 3;
             // 
             // materialLabel1
             // 
             this.materialLabel1.AutoSize = true;
             this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel1.Location = new System.Drawing.Point(8, 27);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(49, 19);
+            this.materialLabel1.Size = new System.Drawing.Size(49, 18);
             this.materialLabel1.TabIndex = 2;
             this.materialLabel1.Text = "Fecha";
             // 
@@ -111,19 +160,8 @@ namespace AsesoriasPascualBravo
             this.dtpFecha.Location = new System.Drawing.Point(11, 49);
             this.dtpFecha.MinDate = new System.DateTime(2023, 4, 10, 0, 0, 0, 0);
             this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(108, 27);
+            this.dtpFecha.Size = new System.Drawing.Size(131, 27);
             this.dtpFecha.TabIndex = 1;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::AsesoriasPascualBravo.Properties.Resources.pb;
-            this.pictureBox1.Location = new System.Drawing.Point(609, 11);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(133, 90);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // dgvAsignaturas
             // 
@@ -162,79 +200,42 @@ namespace AsesoriasPascualBravo
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             this.dgvAsignaturas.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvAsignaturas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAsignaturas.Size = new System.Drawing.Size(728, 308);
+            this.dgvAsignaturas.Size = new System.Drawing.Size(731, 308);
             this.dgvAsignaturas.TabIndex = 35;
             this.dgvAsignaturas.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvAsignaturas_CellMouseClick);
             // 
-            // materialLabel2
+            // CrearAsesoria
             // 
-            this.materialLabel2.AutoSize = true;
-            this.materialLabel2.Depth = 0;
-            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(130, 27);
-            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(86, 19);
-            this.materialLabel2.TabIndex = 4;
-            this.materialLabel2.Text = "Hora Inicial";
+            this.CrearAsesoria.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CrearAsesoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(50)))));
+            this.CrearAsesoria.FlatAppearance.BorderSize = 0;
+            this.CrearAsesoria.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.CrearAsesoria.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CrearAsesoria.ForeColor = System.Drawing.Color.DarkGray;
+            this.CrearAsesoria.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
+            this.CrearAsesoria.IconColor = System.Drawing.Color.DarkGray;
+            this.CrearAsesoria.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.CrearAsesoria.IconSize = 20;
+            this.CrearAsesoria.Location = new System.Drawing.Point(422, 49);
+            this.CrearAsesoria.Name = "CrearAsesoria";
+            this.CrearAsesoria.Padding = new System.Windows.Forms.Padding(30, 0, 20, 0);
+            this.CrearAsesoria.Size = new System.Drawing.Size(181, 27);
+            this.CrearAsesoria.TabIndex = 7;
+            this.CrearAsesoria.Text = "Crear Asesoria";
+            this.CrearAsesoria.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.CrearAsesoria.UseVisualStyleBackColor = false;
+            this.CrearAsesoria.Click += new System.EventHandler(this.CrearAsesoria_Click);
             // 
-            // materialLabel3
+            // pictureBox1
             // 
-            this.materialLabel3.AutoSize = true;
-            this.materialLabel3.Depth = 0;
-            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel3.Location = new System.Drawing.Point(268, 27);
-            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel3.Name = "materialLabel3";
-            this.materialLabel3.Size = new System.Drawing.Size(78, 19);
-            this.materialLabel3.TabIndex = 6;
-            this.materialLabel3.Text = "Hora Final";
-            // 
-            // dtpHoraFinal
-            // 
-            this.dtpHoraFinal.Font = new System.Drawing.Font("Bahnschrift", 12F);
-            this.dtpHoraFinal.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpHoraFinal.Location = new System.Drawing.Point(272, 49);
-            this.dtpHoraFinal.MinDate = new System.DateTime(2023, 4, 10, 0, 0, 0, 0);
-            this.dtpHoraFinal.Name = "dtpHoraFinal";
-            this.dtpHoraFinal.Size = new System.Drawing.Size(110, 27);
-            this.dtpHoraFinal.TabIndex = 5;
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(50)))));
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.iconButton1.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.Color.DarkGray;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.SignIn;
-            this.iconButton1.IconColor = System.Drawing.Color.DarkGray;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.iconButton1.IconSize = 32;
-            this.iconButton1.Location = new System.Drawing.Point(401, 49);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Padding = new System.Windows.Forms.Padding(30, 0, 20, 0);
-            this.iconButton1.Size = new System.Drawing.Size(189, 40);
-            this.iconButton1.TabIndex = 7;
-            this.iconButton1.Text = "Iniciar Sesión";
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = false;
-            // 
-            // lblSeleccionAsignatura
-            // 
-            this.lblSeleccionAsignatura.AutoSize = true;
-            this.lblSeleccionAsignatura.Depth = 0;
-            this.lblSeleccionAsignatura.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblSeleccionAsignatura.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblSeleccionAsignatura.Location = new System.Drawing.Point(11, 102);
-            this.lblSeleccionAsignatura.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblSeleccionAsignatura.Name = "lblSeleccionAsignatura";
-            this.lblSeleccionAsignatura.Size = new System.Drawing.Size(81, 19);
-            this.lblSeleccionAsignatura.TabIndex = 8;
-            this.lblSeleccionAsignatura.Text = "Asignatura";
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = global::AsesoriasPascualBravo.Properties.Resources.pb;
+            this.pictureBox1.Location = new System.Drawing.Point(609, 11);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(133, 90);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // FrmCrearAsesoria
             // 
@@ -248,8 +249,8 @@ namespace AsesoriasPascualBravo
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsignaturas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -266,7 +267,7 @@ namespace AsesoriasPascualBravo
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
         private System.Windows.Forms.DateTimePicker dtpHoraFinal;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton CrearAsesoria;
         private MaterialSkin.Controls.MaterialLabel lblSeleccionAsignatura;
     }
 }
